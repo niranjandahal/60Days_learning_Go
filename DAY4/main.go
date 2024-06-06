@@ -33,5 +33,4 @@ func main() {
 	// Calling the divideNamed function with named return values
 	q, r := divideNamed(10, 3)
 	fmt.Println("Quotient:", q, "Remainder:", r)
-
 }
