@@ -27,5 +27,9 @@ func main(){
 	}
 
 	fmt.Println("Modified Slice:", slice)
+
+
+	//call the wallet main
+	walletmain()
 }
 

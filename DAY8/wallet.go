@@ -37,7 +37,7 @@ func (w *Wallet) CheckBalance() {
 	fmt.Printf("%s's wallet balance: %.2f\n", w.Owner, w.Balance)
 }
 
-func main() {
+func walletmain() {
 	reader := bufio.NewReader(os.Stdin)
 	wallets := []*Wallet{}
 
