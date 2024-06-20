@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -19,8 +20,8 @@ func main() {
     case secondChannel := <-message:
       fmt.Println("Channel Data:", secondChannel)
 	
-    default:
-      fmt.Println("Wait!! Channels are not ready for execution")
+    // default:
+    //   fmt.Println("Wait!! Channels are not ready for execution")
   }
 
 }
@@ -36,7 +37,7 @@ func channelMessage(message chan string) {
 
 func channelNumber(number chan int) {
   
-//   time.Sleep(2 * time.Second)
+  time.Sleep(2 * time.Second)
 	
 	number <- 15
 }
