@@ -1,15 +1,12 @@
-// main.go
 package main
 
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
-	"time"
-
 	"math/rand"
+	"net/http"
 	"strconv"
-
+	"time"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gorilla/mux"
 	"golang.org/x/crypto/bcrypt"

@@ -7,6 +7,7 @@ import (
 )
 
 func longRunningTask(ctx context.Context) {
+
     fmt.Println("Task started")
 
     for {
@@ -16,12 +17,13 @@ func longRunningTask(ctx context.Context) {
             return
         default:
             fmt.Print(".")
-            time.Sleep(100 * time.Millisecond) // Simulate work by sleeping for 100 milliseconds
+            time.Sleep(100 * time.Millisecond)
         }
     }
 }
 
 func main() {
+
     ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
     defer cancel() 
 
