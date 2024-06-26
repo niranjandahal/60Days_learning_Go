@@ -20,11 +20,21 @@ func main() {
 	database.InitDB()
 
 	r := mux.NewRouter()
+
+	// Route to handle user registration
 	r.HandleFunc("/signup", handlers.SignUp).Methods("POST")
+
+	// Route to handle user login
 	r.HandleFunc("/login", handlers.LogIn).Methods("POST")
-	r.HandleFunc("/ws", handlers.HandleWebSocket) // WebSocket endpoint
+
+	// Route to handle adding a new chat message
+	r.HandleFunc("/messages", handlers.AddMessage).Methods("POST")
+
+	// Route to handle retrieving all chat messages
+	r.HandleFunc("/messages", handlers.GetMessages).Methods("GET")
+
+	// Serve static files
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-	
 
 	log.Println("Server is running on port 8080")
 	http.ListenAndServe(":8080", r)

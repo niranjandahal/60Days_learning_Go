@@ -9,18 +9,16 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>Sign Up</h1>
-            <form id="signupForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit" class="btn">Sign Up</button>
-            </form>
-            <div id="message"></div>
-        </div>
+    <div class="form-container">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <div id="message"></div>
     </div>
     <script>
         document.getElementById('signupForm').addEventListener('submit', function (event) {
@@ -41,7 +39,8 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('message').innerText = 'User created with ID: ' + data.id;
-                    window.location.href = "login.html";
+                    window.location.href = "login.html";  // Redirect to login page
+
                 })
                 .catch(error => {
                     document.getElementById('message').innerText = 'Error: ' + error;

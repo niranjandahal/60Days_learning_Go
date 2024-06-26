@@ -1,0 +1,35 @@
+<!-- static/chat.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Chat Application</h2>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h3>Chat Room</h3>
+            <div id="chatwindow">
+                <!-- Messages will be dynamically inserted here -->
+            </div>
+            <div id="inputarea">
+                <input type="text" id="message" placeholder="Type your message here...">
+                <button class="button" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Chat Application. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

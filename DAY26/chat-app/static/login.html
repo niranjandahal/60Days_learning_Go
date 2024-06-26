@@ -9,18 +9,16 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>Log In</h1>
-            <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit" class="btn">Log In</button>
-            </form>
-            <div id="message"></div>
-        </div>
+    <div class="form-container">
+        <h1>Log In</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <div id="message"></div>
     </div>
     <script>
         document.getElementById('loginForm').addEventListener('submit', function (event) {
@@ -46,7 +44,7 @@
                 })
                 .then(data => {
                     document.getElementById('message').innerText = 'Login successful!';
-                    window.location.href = "chat.html";
+                    window.location.href = "homepage.html";  // Redirect to chat page after successful login
                 })
                 .catch(error => {
                     document.getElementById('message').innerText = 'Error: ' + error;
